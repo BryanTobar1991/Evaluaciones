@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Formulario de Nombres</title>
+</head>
+<body>
+    <div class="form-container">
+        <h1>Formulario de Nombres</h1>
+        <form action="/ejercicio2" method="post">
+            <label for="nombre1">Nombre 1:</label>
+            <input type="text" id="nombre1" name="nombre1" required>
+
+            <label for="nombre2">Nombre 2:</label>
+            <input type="text" id="nombre2" name="nombre2" required>
+
+            <label for="nombre3">Nombre 3:</label>
+            <input type="text" id="nombre3" name="nombre3" required>
+
+            <input type="submit" value="Enviar">
+        </form>
+    </div>
+</body>
+</html>
