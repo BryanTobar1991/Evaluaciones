@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Formulario de Notas</title>
+</head>
+<body>
+        <div class="container1">
+        <h1>Calculo de compras</h1>
+        <form action="/ejercicio1" method="post">
+            <input type="text" name="nombre" placeholder="Ingresa tu nombre" required>
+            <input type="number" name="edad" placeholder="Ingresa tu edad" required>
+            <input type="number" name="cantidad" placeholder="Ingresa la cantidad de tarros de pintura a comprar" required>
+            <button type="submit">Calcular</button>
+        </form>
+        {% if resultado %}
+        <div>
+            <h2>Resultado:</h2>
+            <p>{{ resultado | safe }}</p>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
